@@ -5,6 +5,7 @@ import subprocess
 import sys
 import pytest
 
+
 class TestCLIIntegration:
     """Test CLI application integrating with calculator module"""
 
@@ -49,6 +50,7 @@ class TestCLIIntegration:
         result = self.run_cli("invalid", "1", "2")
         assert result.returncode == 1
         assert "Unknown operation" in result.stdout
+
 
 class TestCalculatorModuleIntegration:
     """Test calculator module functions work together"""
