@@ -2,8 +2,10 @@
 Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
+
 import pytest
 from src.calculator import add, divide, subtract, multiply, power, square_root
+
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
@@ -28,6 +30,7 @@ class TestBasicOperations:
         assert subtract(-1, -1) == 0
         assert subtract(-5, -3) == -2
 
+
 class TestMultiplyDivideWithValidation:
     """Test multiplication and division with input validation."""
 
@@ -42,6 +45,7 @@ class TestMultiplyDivideWithValidation:
         """Test divide rejects non-numeric inputs."""
         with pytest.raises(TypeError, match="Division requires numeric inputs"):
             divide("10", 2)
+
 
 class TestMultiplyDivide:
     """Test multiplication and division operations"""
@@ -71,6 +75,7 @@ class TestMultiplyDivide:
         assert divide(-10, 2) == -5
         assert divide(-12, -3) == 4
 
+
 class TestAdvancedOperations:
     """Test power and square root operations"""
 
@@ -92,5 +97,7 @@ class TestAdvancedOperations:
 
     def test_square_root_negative_raises_error(self):
         """Test that square root of negative raises ValueError"""
-        with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
+        with pytest.raises(
+            ValueError, match="Cannot calculate square root of negative number"
+        ):
             square_root(-4)
