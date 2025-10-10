@@ -32,14 +32,14 @@ def calculate(operation, num1, num2=None):
             click.echo(f"Unknown operation: {operation}")
             sys.exit(1)
 
-        # Format result nicely
+        # Output formatting
         if isinstance(result, float) and result == int(result):
             click.echo(int(result))
         else:
             click.echo(f"{result:.2f}")
 
     except ZeroDivisionError:
-        # Match expected test output exactly
+        # Match test expectation exactly
         click.echo("Cannot divide by zero")
         sys.exit(1)
     except ValueError as e:

@@ -5,6 +5,7 @@ import subprocess
 import sys
 import pytest
 
+
 class TestCLIIntegration:
     """Test CLI application integrating with calculator module"""
 
