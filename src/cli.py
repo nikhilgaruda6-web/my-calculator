@@ -38,6 +38,10 @@ def calculate(operation, num1, num2=None):
         else:
             click.echo(f"{result:.2f}")
 
+    except ZeroDivisionError:
+        # Match expected test output exactly
+        click.echo("Cannot divide by zero")
+        sys.exit(1)
     except ValueError as e:
         click.echo(f"Error: {e}")
         sys.exit(1)
@@ -49,5 +53,3 @@ def calculate(operation, num1, num2=None):
 # pylint: disable=no-value-for-parameter
 if __name__ == "__main__":
     calculate()
-
-# Final newline added

@@ -50,6 +50,7 @@ class TestCLIIntegration:
         assert result.returncode == 1
         assert "Unknown operation" in result.stdout
 
+
 class TestCalculatorModuleIntegration:
     """Test calculator module functions work together"""
 
