@@ -26,7 +26,7 @@ def calculate(operation, num1, num2=None):
             result = divide(num1, num2)
         elif operation == "power":
             result = power(num1, num2)
-        elif operation in ("sqrt", "square_root"):  # Fixed comparison
+        elif operation in ("sqrt", "square_root"):
             result = square_root(num1)
         else:
             click.echo(f"Unknown operation: {operation}")
